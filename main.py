@@ -8,8 +8,12 @@ def main():
     G = nx.DiGraph()
     nodes: dict = {}
     for line in prerequisites.values:
-        if line[1] is not None and line[0] is not None:
+        if pd.notna(line[1]) and pd.notna(line[0]):
             G.add_edge(line[1], line[0])
+        if pd.notna(line[1]):
+            G.add_node(line[1])
+        if pd.notna(line[0]):
+            G.add_node(line[0])
     for layer, nodes in enumerate(nx.topological_generations(G)):
         # `multipartite_layout` expects the layer as a node attribute, so add the
         # numeric layer value as a node attribute

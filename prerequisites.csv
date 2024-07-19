@@ -1,5 +1,4 @@
 course,prerequisite,group
-PHYS 122,PHYS 121,all_tracks
 PHYS 122,MATH 125,all_tracks
 PHYS 123,PHYS 122,all_tracks
 PHYS 123,MATH 126,all_tracks
@@ -10,31 +9,16 @@ PHYS 225,PHYS 227,all_tracks
 PHYS 227,PHYS 123,all_tracks
 PHYS 294,,all_tracks
 PHYS 321,PHYS 227,all_tracks
-PHYS 321,PHYS 228,all_tracks
-PHYS 321,MATH 207,all_tracks
 PHYS 321,MATH 208,all_tracks
-PHYS 321,MATH 209,all_tracks
-PHYS 321,MATH 224,all_tracks
-PHYS 321,MATH 335,all_tracks
 PHYS 322,PHYS 321,all_tracks
 PHYS 334,PHYS 123,all_tracks
 PHYS 231,PHYS 123,data_acquisition_and_analysis
 AMATH 301,MATH 125,data_acquisition_and_analysis
-PHYS 226,PHYS 225,more_physics
-PHYS 226,PHYS 227,more_physics
-PHYS 323,PHYS 322,more_physics
 PHYS 324,PHYS 225,more_physics
 PHYS 324,PHYS 228,more_physics
-PHYS 328,PHYS 224,more_physics
-PHYS 328,PHYS 225,more_physics
-PHYS 329,PHYS 228,more_physics
-PHYS 228,PYS 227,more_math
+PHYS 228,PHYS 227,more_math
 MATH 207,MATH 125,more_math
 MATH 208,MATH 126,more_math
-MATH 209,MATH 207,more_math
-MATH 209,MATH 208,more_math
-MATH 224,MATH 126,more_math
-AMATH 401,MATH 126,more_math
 PHYS 331,PHYS 227,advanced_lab
 PHYS 331,PHYS 321,advanced_lab
 PHYS 335,PHYS 334,advanced_lab
