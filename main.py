@@ -1,14 +1,27 @@
-import pandas as pd
-import networkx as nx
+"""Made by Kostia"""
+
 import matplotlib.pyplot as plt
+import networkx as nx
+import pandas as pd
 
 
-def main():
+def main() -> None:
+    """main function"""
     prerequisites: pd.DataFrame = pd.read_csv("prerequisites.csv")
-    G: nx.DiGraph = nx.DiGraph()
+    G = nx.DiGraph()
     groups: dict[str, set[str]] = {}
 
-    color_list = ["green", "red", "blue", "purple", "orange", "yellow", "brown"]
+    color_list: list[str] = [
+        "green",
+        "red",
+        "blue",
+        "purple",
+        "orange",
+        "yellow",
+        "brown",
+        "gray", 
+        "magenta",
+    ]
     for line in prerequisites.values:
         if not line[2] in groups:
             groups[line[2]] = {line[0]}
@@ -16,9 +29,9 @@ def main():
             groups[line[2]].add(line[0])
 
     color_map: dict[str, str] = {}
-    for group, course_set in groups.items():
+    for course_set in groups.values():
         # retreats the last color from the color_list as the current color
-        color = color_list.pop()
+        color: str = color_list.pop()
         for course in course_set:
             if not isinstance(course, str):  # if NaN or None etc.
                 continue
@@ -44,9 +57,8 @@ def main():
     nx.draw_networkx(G, pos=pos, ax=ax, node_color=node_colors)
     ax.set_title("DAG layout in topological order")
     fig.tight_layout()
-    plt.show()
+    plt.show()  # type: ignore[no-untyped-call]
 
 
 if __name__ == "__main__":
     main()
-
