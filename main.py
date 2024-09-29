@@ -3,11 +3,12 @@
 import matplotlib.pyplot as plt
 import networkx as nx
 import pandas as pd
+import sys
 
 
 def main() -> None:
     """main function"""
-    prerequisites: pd.DataFrame = pd.read_csv("prerequisites.csv")
+    prerequisites: pd.DataFrame = pd.read_csv(sys.argv[1])
     G = nx.DiGraph()
     groups: dict[str, set[str]] = {}
 
@@ -19,7 +20,7 @@ def main() -> None:
         "orange",
         "yellow",
         "brown",
-        "gray", 
+        "gray",
         "magenta",
     ]
     for line in prerequisites.values:
