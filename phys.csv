@@ -8,7 +8,7 @@ PHYS 225,PHYS 227,all_tracks
 PHYS 227,PHYS 123,all_tracks
 PHYS 294,,all_tracks
 PHYS 321,PHYS 227,all_tracks
-PHYS 321,MATH 208,all_tracks
+PHYS 321,AMATH 351,all_tracks
 PHYS 322,PHYS 321,all_tracks
 PHYS 334,PHYS 123,all_tracks
 PHYS 231,PHYS 123,data_acquisition_and_analysis
@@ -16,7 +16,7 @@ AMATH 301,,data_acquisition_and_analysis
 PHYS 324,PHYS 225,more_physics
 PHYS 324,PHYS 228,more_physics
 PHYS 228,PHYS 227,more_math
-MATH 207,,more_math
+AMATH 351,,more_math
 MATH 208,,more_math
 PHYS 331,PHYS 227,advanced_lab
 PHYS 331,PHYS 321,advanced_lab
